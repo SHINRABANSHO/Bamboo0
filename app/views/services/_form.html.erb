@@ -1,0 +1,82 @@
+<%= form_with(model: service, local: true) do |form| %>
+  <% if service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+      <ul>
+      <% service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :service_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.number_field :company_id, id: :service_company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status, id: :service_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :images %>
+    <%= form.text_area :images, id: :service_images %>
+  </div>
+
+  <div class="field">
+    <%= form.label :catch_copy %>
+    <%= form.text_field :catch_copy, id: :service_catch_copy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discription %>
+    <%= form.text_area :discription, id: :service_discription %>
+  </div>
+
+  <div class="field">
+    <%= form.label :strong_point %>
+    <%= form.text_area :strong_point, id: :service_strong_point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rv_whole %>
+    <%= form.number_field :rv_whole, id: :service_rv_whole %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rv_cost %>
+    <%= form.number_field :rv_cost, id: :service_rv_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rv_support %>
+    <%= form.number_field :rv_support, id: :service_rv_support %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rv_maintenability %>
+    <%= form.number_field :rv_maintenability, id: :service_rv_maintenability %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tv_experience %>
+    <%= form.number_field :tv_experience, id: :service_tv_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rv_simplisity %>
+    <%= form.number_field :rv_simplisity, id: :service_rv_simplisity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Company</th>
+      <th>Status</th>
+      <th>Images</th>
+      <th>Catch copy</th>
+      <th>Discription</th>
+      <th>Strong point</th>
+      <th>Rv whole</th>
+      <th>Rv cost</th>
+      <th>Rv support</th>
+      <th>Rv maintenability</th>
+      <th>Tv experience</th>
+      <th>Rv simplisity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.name %></td>
+        <td><%= service.company_id %></td>
+        <td><%= service.status %></td>
+        <td><%= service.images %></td>
+        <td><%= service.catch_copy %></td>
+        <td><%= service.discription %></td>
+        <td><%= service.strong_point %></td>
+        <td><%= service.rv_whole %></td>
+        <td><%= service.rv_cost %></td>
+        <td><%= service.rv_support %></td>
+        <td><%= service.rv_maintenability %></td>
+        <td><%= service.tv_experience %></td>
+        <td><%= service.rv_simplisity %></td>
+        <td><%= link_to 'Show', service %></td>
+        <td><%= link_to 'Edit', edit_service_path(service) %></td>
+        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service', new_service_path %>
